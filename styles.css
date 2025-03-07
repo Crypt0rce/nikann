@@ -148,11 +148,9 @@ countdown-item span:last-child {
     border-radius: 10px;
 }
 
-/* Медиа-запросы для мобильных устройств */
-
 
 /* Медиа-запросы для мобильных устройств */
-@media (max-width: 400px) {
+@media (max-width: 768px) {
     .countdown {
         flex-wrap: nowrap;
     }
@@ -160,3 +158,4 @@ countdown-item span:last-child {
     .countdown-item {
         flex: 1;
     }
+}
