@@ -152,7 +152,7 @@ countdown-item span:last-child {
 
 
 /* Медиа-запросы для мобильных устройств */
-@media (max-width: 740px) {
+@media (max-width: 400px) {
     .countdown {
         flex-wrap: nowrap;
     }
