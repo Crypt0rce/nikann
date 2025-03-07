@@ -98,7 +98,6 @@
 
         // Функция для воспроизведения аудио
         function playAudio() {
-            audio.muted = false;
             audio.play().catch(function(error) {
                 console.log('Воспроизведение аудио заблокировано:', error);
             });
