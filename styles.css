@@ -114,12 +114,14 @@ h4 {
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: nowrap;
 }
 
 .countdown-item {
     text-align: center;
     background: rgba(255, 255, 255, 0.9);
     padding: 10px 20px;
+    border: 2px solid #fff;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
