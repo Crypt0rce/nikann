@@ -11,7 +11,7 @@ function updateCountdown() {
 
     document.getElementById("days").textContent = days;
     document.getElementById("hours").textContent = hours;
-    document.getElementBy이너 (minutes).textContent = minutes;
+    document.getElementById("minutes").textContent = minutes;
     document.getElementById("seconds").textContent = seconds;
 }
 
