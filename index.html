@@ -10,7 +10,7 @@
 </head>
 <body>
      <!-- Аудио элемент -->
-     <audio id="background-audio" src="audio/audiomain.mp3" loop></audio>
+     <audio id="background-audio" src="audio/mainaidio.mp3" loop></audio>
 
      <!-- Кнопка для управления аудио -->
      <button id="audio-control" class="audio-button">Выключить музыку</button>
@@ -98,7 +98,8 @@
 
         // Функция для воспроизведения аудио
         function playAudio() {
-          audio.play().catch(function(error) {
+            audio.muted = false;
+            audio.play().catch(function(error) {
                 console.log('Воспроизведение аудио заблокировано:', error);
             });
         }
