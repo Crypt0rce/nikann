@@ -4,6 +4,16 @@ function updateCountdown() {
     const now = new Date().getTime();
     const distance = countdownDate - now;
 
+    if (distance < 0) {
+        // Если дата уже прошла
+        document.getElementById("days").textContent = "0";
+        document.getElementById("hours").textContent = "0";
+        document.getElementById("minutes").textContent = "0";
+        document.getElementById("seconds").textContent = "0";
+        clearInterval(timer); // Останавливаем таймер
+        return;
+    }
+
     // Вычисляем дни, часы, минуты и секунды
     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
     const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -18,5 +28,23 @@ function updateCountdown() {
 }
 
 // Обновляем обратный отсчет каждую секунду
-setInterval(updateCountdown, 1000);
+const timer = setInterval(updateCountdown, 1000);
 updateCountdown();
+
+// Инициализация Яндекс Карт
+ymaps.ready(init);
+
+function init() {
+    var myMap = new ymaps.Map("map", {
+        center: [51.669257, 39.222045], // Кординаты Сабуров Холл
+        zoom: 16, // Масштаб карты
+        controls: ['zoomControl', 'fullscreenControl']
+    });
+
+    var myPlacemark = new ymaps.Placemark([51.669257, 39.222045], {
+        hintContent: 'Сабуров Холл',
+        balloonContent: 'ул. Пролетарская, 87в, 7-й этаж, Воронеж, Воронежская обл., 394036'
+    });
+
+    myMap.geoObjects.add(myPlacemark);
+}
