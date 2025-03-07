@@ -144,10 +144,24 @@ countdown-item span:last-child {
     width: 80%;
     height: 400px;
     background-color: rgba(236, 240, 241, 0.8);
-    margin-top: 20px;
+    margin-top: 30px;
     border-radius: 10px;
 }
 
+.audio-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #000;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 1000;
+}
 
 /* Медиа-запросы для мобильных устройств */
 @media (max-width: 768px) {
