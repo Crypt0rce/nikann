@@ -149,29 +149,14 @@ countdown-item span:last-child {
 }
 
 /* Медиа-запросы для мобильных устройств */
+
+
+/* Медиа-запросы для мобильных устройств */
 @media (max-width: 768px) {
-    h1 {
-        font-size: 24px;
-    }
-
-    h2 {
-        font-size: 40px;
-    }
-
-    h3 {
-        font-size: 28px;
-    }
-
     .countdown {
-        flex-direction: column;
-        gap: 10px;
+        flex-wrap: nowrap;
     }
 
     .countdown-item {
-        width: 80%;
+        flex: 1;
     }
-
-    .text-box {
-        padding: 15px;
-    }
-}
