@@ -1,6 +1,6 @@
 // Простой таймер обратного отсчета
 function updateCountdown() {
-    const countdownDate = new Date("2025-03-03T00:00:00").getTime();
+    const countdownDate = new Date("2025-05-03T00:00:00").getTime();
     const now = new Date().getTime();
     const distance = countdownDate - now;
 
