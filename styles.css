@@ -141,7 +141,7 @@ countdown-item span:last-child {
 }
 
 #map {
-    width: 100%;
+    width: 80%;
     height: 400px;
     background-color: rgba(236, 240, 241, 0.8);
     margin-top: 20px;
@@ -150,12 +150,16 @@ countdown-item span:last-child {
 
 
 /* Медиа-запросы для мобильных устройств */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .countdown {
         flex-wrap: nowrap;
+    }
+
+    #map {
+        height: 200px;
     }
 
     .countdown-item {
         flex: 1;
     }
-}
+}   
