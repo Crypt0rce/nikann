@@ -29,15 +29,14 @@
 body {
     margin: 0;
     font-family: 'PlayfairDisplay', serif;
-    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
-                url('images/hero-image.jpg') no-repeat center center fixed;
+    background: url('images/hero-image.jpg') no-repeat center center fixed;
     background-size: cover;
     background-attachment: fixed;
-    color: #333;
+    color: #fff; /* Устанавливаем цвет текста на белый для контраста с фоном */
 }
 
 h1, h2, h3, h4, h5, h6, p, span, div {
-    color: #333;
+    color: #fff; /* Устанавливаем цвет текста на белый */
 }
 
 .hero-image {
@@ -51,10 +50,10 @@ h1, h2, h3, h4, h5, h6, p, span, div {
 }
 
 .overlay {
-    background: rgba(255, 255, 255, 0.6); /* Изменен уровень прозрачности для лучшей читаемости */
+    background: rgba(0, 0, 0, 0.5); /* Добавляем полупрозрачный черный фон для улучшения читаемости текста */
     padding: 40px;
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 h1 {
