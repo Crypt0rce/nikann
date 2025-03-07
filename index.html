@@ -9,6 +9,12 @@
     <script src="https://api-maps.yandex.ru/2.1/?apikey=38d9e5f1-3412-4e2f-a43d-3a2cd73dea40&lang=ru_RU" type="text/javascript"></script>
 </head>
 <body>
+     <!-- Аудио элемент -->
+     <audio id="background-audio" src="audio/mainaidio.mp3" loop></audio>
+
+     <!-- Кнопка для управления аудио -->
+     <button id="audio-control" class="audio-button">Выключить музыку</button>
+ 
     <div class="hero-image">
         <div class="overlay">
             <div class="text-box">
@@ -84,6 +90,40 @@
                 Мы с нетерпением ждем встречи с вами!</p>
         </section>
     </main>
+
+    <script>
+        // Инициализация аудио
+        var audio = document.getElementById('background-audio');
+        var controlButton = document.getElementById('audio-control');
+
+        // Функция для воспроизведения аудио
+        function playAudio() {
+            audio.play().catch(function(error) {
+                console.log('Воспроизведение аудио заблокировано:', error);
+            });
+        }
+
+        // Функция для паузы аудио
+        function pauseAudio() {
+            audio.pause();
+        }
+
+        // Обработчик события для кнопки
+        controlButton.addEventListener('click', function() {
+            if (audio.paused) {
+                playAudio();
+                controlButton.textContent = 'Выключить музыку';
+            } else {
+                pauseAudio();
+                controlButton.textContent = 'Включить музыку';
+            }
+        });
+
+        // Попытка воспроизвести аудио при загрузке страницы
+        window.onload = function() {
+            playAudio();
+        };
+    </script>
 
     <script src="script.js"></script>
 </body>
