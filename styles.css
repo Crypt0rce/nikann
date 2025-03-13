@@ -1,3 +1,4 @@
+/* Общие стили для body */
 body {
     margin: 0;
     font-family: 'PlayfairDisplay', serif;
@@ -11,20 +12,15 @@ body {
     align-items: center;
     min-height: 100vh;
     text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-.location-box {
-    background: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border: 2px solid #fff;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    color: #000;
-    text-shadow: none;
+
+
+/* Стили для текстовых блоков */
+.text-box {
     margin: 20px 0;
-    max-width: 800px;
-    width: 100%;
-    text-align: center;
 }
 
 .text-paragraph {
@@ -37,8 +33,10 @@ body {
     text-align: left;
     margin: 10px 0;
     line-height: 1.5;
+    font-size: 1.1em;
 }
 
+/* Стили для заголовков */
 h1, h2, h3, h4, h5, h6, p, span, div {
     color: #4b576f;
     font-style: italic;
@@ -46,14 +44,14 @@ h1, h2, h3, h4, h5, h6, p, span, div {
 }
 
 h1 {
-    font-size: 32px;
+    font-size: 2em;
     font-weight: 400;
     color: #000;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 h2 {
-    font-size: 60px;
+    font-size: 3em;
     font-weight: 900;
     font-style: italic;
     color: #000;
@@ -61,7 +59,7 @@ h2 {
 }
 
 h3 {
-    font-size: 40px;
+    font-size: 2.5em;
     font-weight: 900;
     font-style: italic;
     color: #983e70;
@@ -69,82 +67,25 @@ h3 {
 }
 
 h4 {
-    font-size: 20px;
+    font-size: 1.5em;
     font-weight: 500;
     font-style: italic;
     color: #000;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-.hero-image {
-    position: relative;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.overlay {
-    background: rgba(255, 255, 255, 0.8);
-    padding: 40px;
-    border: 2px solid #fff;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    color: #000;
-    text-shadow: none;
-}
-
-.countdown {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: nowrap;
-}
-
-.countdown-item {
-    text-align: center;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 10px 20px;
-    border: 2px solid #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.countdown-item span:first-child {
-    font-size: 36px;
-    font-weight: bold;
-    font-style: italic;
-    color: #000000;
-}
-
-.countdown-item span:last-child {
-    font-size: 18px;
-    color: #95a5a6;
-    font-style: italic;
-    text-transform: uppercase;
-}
-
-#map {
-    width: 100%;
-    height: 400px;
-    background-color: rgba(236, 240, 241, 0.8);
-    margin-top: 20px;
-    border-radius: 10px;
-}
-
+/* Стили для аудио кнопки */
 .audio-button {
     position: fixed;
     top: 20px;
     right: 20px;
-    padding: 10px 20px;
+    padding: 10px 15px;
     background-color: rgba(255, 255, 255, 0.8);
     border: 2px solid #fff;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     color: #000;
-    font-size: 16px;
+    font-size: 1em;
     cursor: pointer;
     z-index: 1000;
 }
@@ -153,18 +94,49 @@ h4 {
     margin-right: 5px;
 }
 
-.rsvp {
-    padding: 40px 20px;
-    background: rgba(255, 255, 255, 0.9);
-    border: 2px solid #fff;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    max-width: 600px;
-    width: 100%;
+/* Стили для счетчика обратного отсчета */
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
     margin: 20px 0;
-    text-align: center;
 }
 
+.countdown-item {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px 15px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    min-width: 60px;
+}
+
+.countdown-item span:first-child {
+    font-size: 2em;
+    font-weight: bold;
+    font-style: italic;
+    color: #000000;
+}
+
+.countdown-item span:last-child {
+    font-size: 1em;
+    color: #95a5a6;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+/* Стили для карты */
+#map {
+    width: 100%;
+    height: 300px;
+    background-color: rgba(236, 240, 241, 0.8);
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+/* Стили для формы RSVP */
 .rsvp-form {
     display: flex;
     flex-direction: column;
@@ -182,7 +154,7 @@ h4 {
 }
 
 .rsvp-form label {
-    font-size: 18px;
+    font-size: 1.1em;
     color: #4b576f;
     font-style: italic;
 }
@@ -193,7 +165,7 @@ h4 {
     padding: 10px;
     border: 1px solid #4b576f;
     border-radius: 8px;
-    font-size: 16px;
+    font-size: 1em;
     color: #4b576f;
     background: rgba(255, 255, 255, 0.7);
 }
@@ -212,7 +184,7 @@ h4 {
     border-radius: 10px;
     background-color: #983e70;
     color: #fff;
-    font-size: 18px;
+    font-size: 1.1em;
     cursor: pointer;
     transition: background-color 0.3s ease;
     align-self: flex-end;
@@ -222,27 +194,46 @@ h4 {
     background-color: #7a2e5c;
 }
 
-@media (max-width: 768px) {
-    .rsvp-form {
-        padding: 0 10px;
-    }
-}
-
 /* Медиа-запросы для мобильных устройств */
 @media (max-width: 768px) {
-    .countdown {
-        flex-wrap: nowrap;
+    h1 {
+        font-size: 1.5em;
     }
 
-    #map {
-        height: 300px;
+    h2 {
+        font-size: 2em;
+    }
+
+    h3 {
+        font-size: 1.8em;
+    }
+
+    h4 {
+        font-size: 1.2em;
+    }
+
+    .countdown {
+        gap: 10px;
     }
 
     .countdown-item {
-        flex: 1;
+        padding: 8px 12px;
+        min-width: 50px;
+    }
+
+    .countdown-item span:first-child {
+        font-size: 1.5em;
+    }
+
+    .countdown-item span:last-child {
+        font-size: 0.9em;
     }
 
     .text-paragraph {
-        text-align: center;
+        font-size: 1em;
+    }
+
+    .rsvp-form button {
+        font-size: 1em;
     }
 }
