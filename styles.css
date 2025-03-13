@@ -41,8 +41,6 @@ body {
     text-align: center;
 }
 
-
-
 .location-box {
     background: rgba(255, 255, 255, 0.8);
     padding: 20px;
@@ -81,7 +79,7 @@ h1 {
 }
 
 h2 {
-    font-size:60px;
+    font-size: 60px;
     font-weight: 900;
     font-style: italic;
     color: #000;
@@ -124,7 +122,6 @@ h4 {
     text-shadow: none;
 }
 
-
 .countdown {
     display: flex;
     justify-content: center;
@@ -148,7 +145,7 @@ h4 {
     color: #000000;
 }
 
-countdown-item span:last-child {
+.countdown-item span:last-child {
     font-size: 18px;
     color: #95a5a6;
     font-style: italic;
@@ -178,6 +175,10 @@ countdown-item span:last-child {
     z-index: 1000;
 }
 
+.audio-button i {
+    margin-right: 5px;
+}
+
 /* Медиа-запросы для мобильных устройств */
 @media (max-width: 768px) {
     .countdown {
@@ -191,4 +192,4 @@ countdown-item span:last-child {
     .countdown-item {
         flex: 1;
     }
-}   
+}
