@@ -11,6 +11,14 @@ function updateCountdown() {
         document.getElementById("minutes").textContent = "0";
         document.getElementById("seconds").textContent = "0";
         clearInterval(timer); // Останавливаем таймер
+        // Добавляем сообщение
+        const countdownElement = document.querySelector('.countdown');
+        const message = document.createElement('div');
+        message.textContent = "Свадьба началась!";
+        message.style.fontSize = "24px";
+        message.style.fontWeight = "bold";
+        message.style.color = "#983e70";
+        countdownElement.appendChild(message);
         return;
     }
 
@@ -36,7 +44,7 @@ ymaps.ready(init);
 
 function init() {
     var myMap = new ymaps.Map("map", {
-        center: [51.669257, 39.222045], // Кординаты Сабуров Холл
+        center: [51.669257, 39.222045], // Координаты Сабуров Холл
         zoom: 16, // Масштаб карты
         controls: ['zoomControl', 'fullscreenControl']
     });
