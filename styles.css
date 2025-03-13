@@ -1,31 +1,3 @@
-@font-face {
-    font-family: 'PlayfairDisplay';
-    src: url('fonts/PlayfairDisplay-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'PlayfairDisplay';
-    src: url('fonts/PlayfairDisplay-Italic.ttf') format('truetype');
-    font-weight: normal;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'PlayfairDisplay';
-    src: url('fonts/PlayfairDisplay-Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'PlayfairDisplay';
-    src: url('fonts/PlayfairDisplay-BoldItalic.ttf') format('truetype');
-    font-weight: bold;
-    font-style: italic;
-}
-
 body {
     margin: 0;
     font-family: 'PlayfairDisplay', serif;
@@ -179,6 +151,81 @@ h4 {
 
 .audio-button i {
     margin-right: 5px;
+}
+
+.rsvp {
+    padding: 40px 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 100%;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.rsvp-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.rsvp-form label {
+    font-size: 18px;
+    color: #4b576f;
+    font-style: italic;
+}
+
+.rsvp-form input,
+.rsvp-form select,
+.rsvp-form textarea {
+    padding: 10px;
+    border: 1px solid #4b576f;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #4b576f;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.rsvp-form input:focus,
+.rsvp-form select:focus,
+.rsvp-form textarea:focus {
+    outline: none;
+    border-color: #983e70;
+    background: rgba(255, 255, 255, 1);
+}
+
+.rsvp-form button {
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #983e70;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: flex-end;
+}
+
+.rsvp-form button:hover {
+    background-color: #7a2e5c;
+}
+
+@media (max-width: 768px) {
+    .rsvp-form {
+        padding: 0 10px;
+    }
 }
 
 /* Медиа-запросы для мобильных устройств */
