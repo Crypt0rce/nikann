@@ -8,15 +8,11 @@
     <title>Свадебный сайт Анны и Никиты</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,900;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <!-- Подключение Font Awesome для иконок -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://api-maps.yandex.ru/2.1/?apikey=38d9e5f1-3412-4e2f-a43d-3a2cd73dea40&lang=ru_RU" type="text/javascript"></script>
 </head>
 <body>
-    <!-- Аудио элемент -->
     <audio id="background-audio" src="audio/mainaudio.mp3" loop></audio>
-
-    <!-- Кнопка для управления аудио -->
     <button id="audio-control" class="audio-button">
         <i class="fa fa-volume-up"></i>
     </button>
@@ -26,17 +22,20 @@
             <div class="text-box">
                 <h1>День свадьбы</h1>
             </div>
-            <div>
+            <div class="text-box">
                 <h2>Анна & Никита</h2>
             </div>
             <div class="text-box">
-                <p>03.05.2025</p>
+                <h5>03.05.2025</h5>
             </div>
         </div>
     </div>
 
     <main>
         <section class="countdown-section">
+            <div class="text-box">
+                <h3>До торжества осталось</h3>
+            </div>
             <div class="counter-container">
                 <div class="countdown">
                     <div class="countdown-item">
@@ -60,7 +59,9 @@
         </section>
 
         <section class="location">
-            <h3 class="location-title">Место проведения</h3>
+            <div class="text-box">
+                <h3>Место проведения</h3>
+            </div>
             <div class="location-box">
                 <div class="text-box">
                     <p>Время: 17:00</p>
@@ -75,21 +76,26 @@
             <div class="text-box">
                 <h3>Дресс-код</h3>
             </div>
-            <p class="text-paragraph">Будем благодарны, если при выборе наряда на наше торжество вы придержитесь собственного стиля одежды.</p>
+            <div class="text-box">
+                <p class="text-paragraph">Будем благодарны, если при выборе наряда вы придержитесь собственного стиля.</p>
+            </div>
         </section>
 
         <section class="gifts">
             <div class="text-box">
                 <h3>Пожелания по подаркам</h3>
             </div>
-            <p class="text-paragraph">Ваше присутствие в день нашей свадьбы - самый значимый подарок для нас! Мы понимаем, что дарить цветы на свадьбу - это традиция, но мы не сможем насладиться их красотой в полной мере... Будем рады любой другой альтернативе (вино или в денежном эквиваленте).</p>
+            <div class="text-box">
+                <p class="text-paragraph">Ваше присутствие - самый значимый подарок! Будем рады альтернативе цветам.</p>
+            </div>
         </section>
 
         <section class="rsvp">
             <div class="text-box">
                 <h3>Ответ на приглашение</h3>
             </div>
-            <form class="rsvp-form">
+            <div clss="text-box">
+              <form class="rsvp-form">
                 <div class="form-group">
                     <label for="name">Имя:</label>
                     <input type="text" id="name" name="name" required aria-required="true">
@@ -111,14 +117,17 @@
                     <textarea id="message" name="message"></textarea>
                 </div>
                 <button type="submit">Отправить</button>
-            </form>
+              </form>
+              </div>
         </section>
 
         <section class="ps">
             <div class="text-box">
                 <h3>P.S.</h3>
             </div>
-            <p class="text-paragraph">Будем благодарны, если вы воздержитесь от криков "Горько" на празднике, ведь поцелуй — это знак выражения чувств, он не может быть по заказу. Мы с нетерпением ждем встречи с вами!</p>
+            <div class="text-box">
+                <p class="text-paragraph">Просим воздержаться от криков "Горько". Ждем встречи с вами!</p>
+            </div>
         </section>
     </main>
 
